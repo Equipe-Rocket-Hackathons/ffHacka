@@ -12,7 +12,7 @@ export const theme = {
         regular: 'Mulish_400Regular',
         medium: 'Mulish_500Medium',
         bold: 'Mulish_700Bold',
-        ExtraBold: 'Mulish_800ExtraBold',
-        Black: 'Mulish_900Black',
+        extraBold: 'Mulish_800ExtraBold',
+        black: 'Mulish_900Black',
     }
 };

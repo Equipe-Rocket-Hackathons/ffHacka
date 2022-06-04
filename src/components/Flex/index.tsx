@@ -13,8 +13,9 @@ export const Flex: React.FC<Props> = ({
 	flex = 0,
 	justifyContent = 'flex-start',
 	alignItems = 'flex-start',
-	flexDirection = 'column'
+	flexDirection = 'column',
 	children,
+	...rest
 }) => {
 	return (
 		<Container
@@ -22,6 +23,7 @@ export const Flex: React.FC<Props> = ({
 			justifyContent={justifyContent}
 			alignItems={alignItems}
 			flexDirection={flexDirection}
+			{...rest}
 		>
 			{children}
 		</Container>

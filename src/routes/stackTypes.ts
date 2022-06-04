@@ -1,8 +1,9 @@
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 export type RootStackParamList = {
-	BuildingsList: undefined;
-	BuildingFilters: undefined;
+	Onboarding: undefined;
+	Home: undefined;
+	CreateItem: undefined;
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =

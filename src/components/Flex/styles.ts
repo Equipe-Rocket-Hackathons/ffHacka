@@ -9,7 +9,7 @@ type ContainerProps = {
 
 export const Container = styled.View<ContainerProps>`
 	${({ flex }) => flex && css`
-		flex: ${flex}
+		flex: ${flex};
 	`}
 	${({ justifyContent }) => justifyContent && css`
 		justify-content: ${justifyContent};
