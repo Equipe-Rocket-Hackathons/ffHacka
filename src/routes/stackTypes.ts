@@ -1,4 +1,5 @@
 import type { StackScreenProps } from '@react-navigation/stack';
+import { PhotoProps } from '../@types/globalTypes';
 
 export type RootStackParamList = {
 	Onboarding: undefined;
@@ -9,7 +10,9 @@ export type RootStackParamList = {
 	};
 	Confirmation: undefined;
 	Camera: undefined;
-	FormItem: undefined;
+	FormItem: {
+		photo?: PhotoProps
+	};
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =

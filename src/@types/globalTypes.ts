@@ -8,3 +8,9 @@ export type CardItemProps = {
     subTitle: string;
     image: ImageSourcePropType
 }
+
+export type PhotoProps = {
+    height: number,
+    uri: string
+    width: number,
+}
