@@ -1,4 +1,5 @@
 import { CommonActions, useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import React, { useCallback, useLayoutEffect } from 'react';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { CustomText } from '../../components/CustomText';
@@ -6,7 +7,7 @@ import { MainButton } from '../../components/MainButton';
 import * as S from './styles';
 
 export const Confirmation: React.FC = () => {
-    const { navigate, goBack, setOptions, dispatch } = useNavigation()
+    const { navigate, setOptions, dispatch } = useNavigation()
 
     const resetNavigation = useCallback((routes) => {
         dispatch(
@@ -44,6 +45,7 @@ export const Confirmation: React.FC = () => {
 
     return (
         <S.Container>
+            <StatusBar style='auto' />
             <S.StarImage source={require('../../assets/star/star.png')} resizeMode='contain' />
             <S.Content>
                 <CustomText

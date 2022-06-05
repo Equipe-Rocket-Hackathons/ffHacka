@@ -1,4 +1,5 @@
 import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { CustomText } from '../../components/CustomText';
 import { MainButton } from '../../components/MainButton';
@@ -9,6 +10,7 @@ export const Onboarding: React.FC = () => {
 
     return (
         <S.Container>
+            <StatusBar style='dark' />
             <S.OnboardingImage source={require('../../assets/onboarding/onboarding.png')} resizeMode='contain' />
             <S.Content>
                 <CustomText
