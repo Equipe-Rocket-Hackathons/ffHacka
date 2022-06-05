@@ -1,6 +1,7 @@
 import { CommonActions, useNavigation } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import React, { useCallback, useLayoutEffect } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import { Keyboard, TouchableWithoutFeedback } from 'react-native';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { CustomText } from '../../components/CustomText';
 import { Input } from '../../components/Input';
@@ -33,36 +34,38 @@ export const FormItem: React.FC = () => {
     }, [])
 
     return (
-        <S.Container>
-            <StatusBar style='auto' />
-            <S.Content>
-                <CustomText
-                    size={12}
-                    color='text'
-                    weight='bold'
-                    margin='20px 0'
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+            <S.Container>
+                <StatusBar style='auto' />
+                <S.Content>
+                    <CustomText
+                        size={12}
+                        color='text'
+                        weight='bold'
+                        margin='20px 0'
+                    >
+                        Registro de item
+                    </CustomText>
+                    <S.InputContainer>
+                        <Input label='Número de registro' value={Math.random().toString(36).substr(2, 9)} />
+                    </S.InputContainer>
+                    <S.InputContainer>
+                        <Input label='Item' />
+                    </S.InputContainer>
+                    <S.InputContainer>
+                        <Input label='Descrição' multiline numberOfLines={4} />
+                    </S.InputContainer>
+                    <S.InputContainer>
+                        <Input label='Número da nota fiscal eletrônica (NFE)' keyboardType='numeric' />
+                    </S.InputContainer>
+                </S.Content>
+                <MainButton
+                    isFooter
+                    onPress={resetNavigation}
                 >
-                    Registro de item
-                </CustomText>
-                <S.InputContainer>
-                    <Input label='Número de registro' value={Math.random().toString(36).substr(2, 9)} />
-                </S.InputContainer>
-                <S.InputContainer>
-                    <Input label='Item' />
-                </S.InputContainer>
-                <S.InputContainer>
-                    <Input label='Descrição' multiline numberOfLines={4} />
-                </S.InputContainer>
-                <S.InputContainer>
-                    <Input label='Número da nota fiscal eletrônica (NFE)' keyboardType='numeric' />
-                </S.InputContainer>
-            </S.Content>
-            <MainButton
-                isFooter
-                onPress={resetNavigation}
-            >
-                Enviar para análise
-            </MainButton>
-        </S.Container>
+                    Enviar para análise
+                </MainButton>
+            </S.Container>
+        </TouchableWithoutFeedback>
     );
 };
