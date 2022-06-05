@@ -10,7 +10,6 @@ export const Onboarding: React.FC = () => {
     return (
         <S.Container>
             <S.OnboardingImage source={require('../../assets/onboarding/onboarding.png')} resizeMode='contain' />
-
             <S.Content>
                 <CustomText
                     size={24}

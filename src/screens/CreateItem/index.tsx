@@ -9,13 +9,11 @@ export const CreateItem: React.FC = () => {
 
     return (
         <S.Container>
-
             <S.Content>
-
                 <S.NewRegisterImage
                     source={require('../../assets/new_register/new_register.png')}
-                    resizeMode='contain'></S.NewRegisterImage>
-
+                    resizeMode='contain'
+                />
                 <CustomText
                     size={26}
                     align='center'
@@ -25,7 +23,6 @@ export const CreateItem: React.FC = () => {
                 >
                     Adicione facilmente os itens de sua casa
                 </CustomText>
-
                 <CustomText
                     size={14}
                     align='center'
@@ -36,20 +33,18 @@ export const CreateItem: React.FC = () => {
                     Nosso scanner consegue identificar e adicionar automaticamente os itens do cômodo inteiro.
                 </CustomText>
             </S.Content>
-
-        <S.ButtonSection>
-            <MainButton
-                isOutline
-                onPress={() => navigate('Home')}
-            >
-                Fazer captura manual
-            </MainButton>
-
-            <MainButton
-                onPress={() => navigate('Home')}
-            >
-                Escanear ambientes
-            </MainButton>
+            <S.ButtonSection>
+                <MainButton
+                    isOutline
+                    onPress={() => navigate('Home')}
+                >
+                    Fazer captura manual
+                </MainButton>
+                <MainButton
+                    onPress={() => navigate('Home')}
+                >
+                    Escanear ambientes
+                </MainButton>
             </S.ButtonSection>
         </S.Container>
     );
