@@ -26,3 +26,9 @@ export const NewRegisterImage = styled.Image`
   margin-top: 70px;
 `;
 
+export const CloseButtonContainer = styled.View`
+  position: absolute;
+  top: 50;
+  right: 30;
+  `
+
