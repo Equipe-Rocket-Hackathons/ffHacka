@@ -16,7 +16,7 @@ export const StackRoutes: React.FC = () => {
 
 	return (
 		<Navigator
-			initialRouteName='FormItem'
+			initialRouteName='Onboarding'
 			screenOptions={{
 				cardStyle: {
 					backgroundColor: colors.background
