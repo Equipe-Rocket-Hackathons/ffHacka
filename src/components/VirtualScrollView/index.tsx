@@ -10,6 +10,7 @@ export const VirtualScrollView: React.FC<Props> = ({ children, refreshControl })
 	return (
 		<FlatList
 			data={[]}
+			alwaysBounceVertical={false}
 			keyExtractor={() => 'key'}
 			renderItem={null}
 			keyboardShouldPersistTaps='handled'
