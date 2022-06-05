@@ -13,7 +13,7 @@ export const StackRoutes: React.FC = () => {
 
 	return (
 		<Navigator
-			initialRouteName='Onboarding'
+			initialRouteName='Confirmation'
 			screenOptions={{
 				contentStyle: {
 					backgroundColor: colors.background
