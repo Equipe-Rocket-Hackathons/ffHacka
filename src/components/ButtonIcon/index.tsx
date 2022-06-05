@@ -14,7 +14,7 @@ export const ButtonIcon: React.FC<Props> = ({ color, icon, ...rest }) => {
    return (
       <Touchable {...rest} >
          <Container color={color}>
-            <CustomIcon name={icon} color="white" />
+            <CustomIcon name={icon} color="white" size={20} />
          </Container>
       </Touchable>
    );

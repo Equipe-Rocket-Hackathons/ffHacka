@@ -10,8 +10,8 @@ export const Container = styled(View) <ContainerProps>`
    display:flex;
    justify-content:center;
    align-items:center;
-   border-radius: 15px;
-   width: 30px;
-   height: 30px;
+   border-radius: 35px;
+   width: 35px;
+   height: 35px;
    background-color:  ${({ theme, color }) => toAlpha(theme.colors[color || 'gray'], 20)}
 `
