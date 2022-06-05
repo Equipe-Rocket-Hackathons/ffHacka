@@ -54,7 +54,7 @@ export const FormItem: React.FC = () => {
                     <Input label='Descrição' multiline numberOfLines={4} />
                 </S.InputContainer>
                 <S.InputContainer>
-                    <Input label='Número da nota fiscal eletrônica (NFE)' />
+                    <Input label='Número da nota fiscal eletrônica (NFE)' keyboardType='numeric' />
                 </S.InputContainer>
             </S.Content>
             <MainButton
