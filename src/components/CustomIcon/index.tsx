@@ -1,11 +1,12 @@
 import React from 'react';
+import { theme } from '../../global/theme';
 import { MaterialIcon } from './styles';
 
 type CustomIconProps = {
-	name: string
-	color?: string
-	margin?: string
-	size?: number
+	name: string;
+	color?: keyof typeof theme.colors;
+	margin?: string;
+	size?: number;
 }
 
 export const CustomIcon: React.FC<CustomIconProps> = ({

@@ -17,3 +17,7 @@ export const SearchBarContainer = styled.View`
   width: 100%;
   margin-top: -20px;
 `;
+
+export const ItemSeparator = styled.View`
+  width: 15px;
+`;

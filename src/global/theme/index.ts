@@ -6,6 +6,9 @@ export const theme = {
         gray: '#B0B0B0',
         danger: '#DA2020',
         white: '#ffffff',
+        purple: '#6F6BAD',
+        bluGreen: '#76B4A8',
+        orange: '#FFCB7B',
         black: '#212121'
     },
     fonts: {
