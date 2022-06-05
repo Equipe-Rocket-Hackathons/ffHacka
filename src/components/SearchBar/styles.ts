@@ -1,6 +1,5 @@
 import styled from 'styled-components/native';
 import { theme } from '../../global/theme';
-import { toAlpha } from '../../utils/toAlpha';
 
 export const Container = styled.View`
     background: ${({ theme }) => theme.colors.white};

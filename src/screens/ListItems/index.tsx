@@ -50,7 +50,7 @@ export const ListItems: React.FC = () => {
                             {listItems.length < 10 && listItems.length ? `0${listItems.length}` : listItems.length}
                         </CustomText>
                         <CustomText color='white' margin='5px 0 0 0'>
-                            Total de comodos
+                            Total de {subTitle}
                         </CustomText>
                     </Flex>
                     <S.ImageContainer>
