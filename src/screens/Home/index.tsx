@@ -1,5 +1,8 @@
+import { useNavigation } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { FlatList } from 'react-native';
+import { CardItemProps } from '../../@types/globalTypes';
 import { CardCalendar } from '../../components/CardCalendar';
 import { CardItem } from '../../components/CardItem';
 import { CustomText } from '../../components/CustomText';
@@ -9,21 +12,28 @@ import { VirtualScrollView } from '../../components/VirtualScrollView';
 import * as S from './styles';
 
 export const Home: React.FC = () => {
+    const { navigate } = useNavigation()
 
-    const listCards = [
+    const listCards: CardItemProps[] = [
         {
+            id: 1,
             title: 'Residência',
             color: 'purple',
+            subTitle: 'cômodos',
             image: require('../../assets/house/house.png')
         },
         {
+            id: 2,
             title: 'Itens da residência',
             color: 'bluGreen',
+            subTitle: 'itens',
             image: require('../../assets/sofa/sofa.png')
         },
         {
+            id: 3,
             title: 'Veículos',
             color: 'orange',
+            subTitle: 'veículos',
             image: require('../../assets/bike/bike.png')
         },
     ]
@@ -31,6 +41,7 @@ export const Home: React.FC = () => {
 
     return (
         <VirtualScrollView>
+            <StatusBar translucent />
             <S.Container>
                 <S.BannerImage source={require('../../assets/banner/banner.png')} resizeMode='cover' />
                 <S.Content>
@@ -59,9 +70,8 @@ export const Home: React.FC = () => {
                     ItemSeparatorComponent={() => <S.ItemSeparator />}
                     renderItem={({ item }) => (
                         <CardItem
-                            title={item.title}
-                            image={item.image}
-                            color={item.color}
+                            item={item}
+                            onPress={() => navigate('ListItems', { item })}
                         />
                     )}
                 />

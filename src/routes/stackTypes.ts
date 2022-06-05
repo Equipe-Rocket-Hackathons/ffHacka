@@ -1,13 +1,17 @@
-import type { NativeStackScreenProps } from '@react-navigation/native-stack';
+import type { StackScreenProps } from '@react-navigation/stack';
 
 export type RootStackParamList = {
 	Onboarding: undefined;
 	Home: undefined;
 	CreateItem: undefined;
+	ListItems: {
+		item: any
+	};
+	Confirmation: undefined;
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
-	NativeStackScreenProps<RootStackParamList, T>;
+	StackScreenProps<RootStackParamList, T>;
 
 declare global {
 	namespace ReactNavigation {

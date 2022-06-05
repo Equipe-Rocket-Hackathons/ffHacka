@@ -5,12 +5,13 @@ import { Platform, TouchableOpacity } from 'react-native';
 type ContainerProps = {
     isFooter: boolean;
     isOutline: boolean;
+    color: string
 };
 
 export const Container = styled(TouchableOpacity) <ContainerProps>`
     width: 100%;
     height: 60px;
-    background: ${({ theme }) => theme.colors.primary};
+    background: ${({ theme, color }) => theme.colors[color]};
     justify-content: center;
     align-items: center;
     border-radius: 5px;

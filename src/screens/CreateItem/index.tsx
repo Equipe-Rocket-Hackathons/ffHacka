@@ -1,18 +1,26 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { CustomText } from '../../components/CustomText';
 import { MainButton } from '../../components/MainButton';
 import * as S from './styles';
 
 export const CreateItem: React.FC = () => {
-    const { navigate } = useNavigation()
+    const { navigate, goBack, setOptions } = useNavigation()
+
+    useLayoutEffect(() => {
+        setOptions({
+            headerRight: () => (
+                <ButtonIcon icon='close' color='primary' onPress={goBack} />
+            ),
+            headerRightContainerStyle: {
+                paddingRight: 22
+            }
+        })
+    }, [])
 
     return (
         <S.Container>
-            <S.CloseButtonContainer>
-                <ButtonIcon icon='close' color='primary' onPress={()=>navigate('Home')}/>
-            </S.CloseButtonContainer>
             <S.Content>
                 <S.NewRegisterImage
                     source={require('../../assets/new_register/new_register.png')}
