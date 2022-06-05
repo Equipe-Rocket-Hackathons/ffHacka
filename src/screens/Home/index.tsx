@@ -41,7 +41,7 @@ export const Home: React.FC = () => {
 
     return (
         <VirtualScrollView>
-            <StatusBar translucent />
+            <StatusBar translucent style='auto' />
             <S.Container>
                 <S.BannerImage source={require('../../assets/banner/banner.png')} resizeMode='cover' />
                 <S.Content>

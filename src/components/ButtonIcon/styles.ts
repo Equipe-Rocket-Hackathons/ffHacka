@@ -13,5 +13,5 @@ export const Container = styled(View) <ContainerProps>`
    border-radius: 35px;
    width: 35px;
    height: 35px;
-   background-color: ${({ theme, color }) => toAlpha(theme.colors[color || 'white'], 20)}
+   background-color: ${({ theme, color }) => toAlpha(theme.colors[color || 'white'], 30)}
 `

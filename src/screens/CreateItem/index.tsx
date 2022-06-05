@@ -48,7 +48,7 @@ export const CreateItem: React.FC = () => {
             <S.ButtonSection>
                 <MainButton
                     isOutline
-                    onPress={() => navigate('Home')}
+                    onPress={() => navigate('Camera')}
                 >
                     Fazer captura manual
                 </MainButton>

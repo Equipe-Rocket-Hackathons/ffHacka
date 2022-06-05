@@ -6,6 +6,8 @@ import { CreateItem } from '../screens/CreateItem';
 import { Confirmation } from '../screens/Confirmation';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
 import { ListItems } from '../screens/ListItems';
+import { Camera } from '../screens/Camera';
+import { FormItem } from '../screens/FormItem';
 
 const { Navigator, Screen } = createSharedElementStackNavigator();
 
@@ -23,7 +25,32 @@ export const StackRoutes: React.FC = () => {
 		>
 			<Screen name='Onboarding' component={Onboarding} options={{ headerShown: false }} />
 			<Screen name='Home' component={Home} options={{ headerShown: false }} />
-			<Screen name='Confirmation' component={Confirmation} options={{ headerShown: false }} />
+			<Screen
+				name='FormItem'
+				component={FormItem}
+				options={{
+					title: '',
+					headerTransparent: true,
+				}}
+			/>
+			<Screen
+				name='Camera'
+				component={Camera}
+				options={{
+					title: '',
+					headerTransparent: true,
+					headerLeft: () => <></>,
+				}}
+			/>
+			<Screen
+				name='Confirmation'
+				component={Confirmation}
+				options={{
+					title: '',
+					headerTransparent: true,
+					headerLeft: () => <></>,
+				}}
+			/>
 			<Screen
 				name='CreateItem'
 				component={CreateItem}

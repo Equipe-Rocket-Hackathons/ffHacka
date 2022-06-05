@@ -1,5 +1,11 @@
 # FF Hacka
 
+<p align="center">
+<img src="./printScreens/onboarding.png" height="500px">
+<img src="./printScreens/home.png" height="500px">
+<img src="./printScreens/createItem.png" height="500px">
+</p>
+
 ## Sobre
 
 ## 💻 Configurando e rodando a aplicação

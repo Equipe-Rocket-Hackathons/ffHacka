@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components/native';
 import { getBottomSpace } from 'react-native-iphone-x-helper';
 import { Platform, TouchableOpacity } from 'react-native';
+import { toAlpha } from '../../utils/toAlpha';
 
 type ContainerProps = {
     isFooter: boolean;
@@ -19,6 +20,9 @@ export const Container = styled(TouchableOpacity) <ContainerProps>`
     ${({ isOutline, theme }) => isOutline && css`
         background: transparent;
         border: 1px solid ${theme.colors.primary};
+    `}
+    ${({ disabled, theme, color }) => disabled && css`
+        background: ${toAlpha(theme.colors[color], 30)};
     `}
     ${({ isFooter }) => isFooter && css`
         position: absolute;

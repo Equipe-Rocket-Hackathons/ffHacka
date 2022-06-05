@@ -8,6 +8,8 @@ export type RootStackParamList = {
 		item: any
 	};
 	Confirmation: undefined;
+	Camera: undefined;
+	FormItem: undefined;
 };
 
 export type RootStackScreenProps<T extends keyof RootStackParamList> =
