@@ -11,13 +11,16 @@ export const Input: React.FC<InputProps> = ({ label, ...rest }) => {
     return (
         <>
             <CustomText
-                size={12}
+                size={11}
+                weight='bold'
+                color='text'
+                opacity={.5}
+                margin='0 0 8px 0'
             >
                 {label}
             </CustomText>
             <S.Container>
-
-                <S.Input />
+                <S.Input {...rest} />
             </S.Container>
 
         </>

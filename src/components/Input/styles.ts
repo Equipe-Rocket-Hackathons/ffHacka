@@ -1,22 +1,19 @@
+import { TextInput } from 'react-native';
 import styled from 'styled-components/native';
 import { theme } from '../../global/theme';
+import { toAlpha } from '../../utils/toAlpha';
 
 export const Container = styled.View`
     background: ${({ theme }) => theme.colors.white};
     width: 100%;
     height: 50px;
     justify-content: center;
-    padding: 0 15px;
     border-radius: 10px;
     align-self: center;
-    elevation: 5;
-    shadow-color: #000;
-    shadow-offset: 0 2px;
-    shadow-opacity: 0.2;
-    shadow-radius: 5px;
+    border: 1px solid ${({ theme }) => toAlpha(theme.colors.gray, 30)};
 `;
 
-export const Input = styled.TextInput.attrs({
+export const Input = styled(TextInput).attrs({
     placeholderTextColor: theme.colors.gray
 })`
     width: 100%;

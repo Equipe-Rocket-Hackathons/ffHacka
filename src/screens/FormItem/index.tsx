@@ -35,17 +35,28 @@ export const FormItem: React.FC = () => {
     return (
         <S.Container>
             <StatusBar style='auto' />
-
-            <CustomText
-                size={12}
-                
-            >
-                Registro de item
-            </CustomText>
-            <Input label='Número de registro' />
-            <Input label='Item' />
-            <Input label='Descrição' />
-            <Input label='Número da nota fiscal eletrônica (NFE)' />
+            <S.Content>
+                <CustomText
+                    size={12}
+                    color='text'
+                    weight='bold'
+                    margin='20px 0'
+                >
+                    Registro de item
+                </CustomText>
+                <S.InputContainer>
+                    <Input label='Número de registro' value={Math.random().toString(36).substr(2, 9)} />
+                </S.InputContainer>
+                <S.InputContainer>
+                    <Input label='Item' />
+                </S.InputContainer>
+                <S.InputContainer>
+                    <Input label='Descrição' multiline numberOfLines={4} />
+                </S.InputContainer>
+                <S.InputContainer>
+                    <Input label='Número da nota fiscal eletrônica (NFE)' />
+                </S.InputContainer>
+            </S.Content>
             <MainButton
                 isFooter
                 onPress={resetNavigation}
